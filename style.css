@@ -1,89 +1,58 @@
-/* style.css
- * This file provides css styles.
- */
-
-body,html {
-	background-color: #3b4b54; width : 100%;
-	height: 100%;
-	margin: 0 auto;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color: #ffffff;
+/* CSS Document */
+/*Cuerpo de la Pagina Web*/
+.body{
+/*border-radius:1px;
+/*background-position: right;*/
+background:#FFF;
+/*border-right: 2px solid #009;
+border-top: 2px solid #009;
+border-left: 2px solid #009;
+border-bottom: 2px solid #009;
+font-family:Verdana, Geneva, sans-serif;
+font-size:10px;*/
 }
 
-a {
-	text-decoration: none;
-	color: #00aed1;
+.body_sis{
+border-radius:5px;
+/*background:url(imagenes/fondo.png);*
+/*background-repeat:no-repeat;*/
+/*background-position: right;*/
+background: #039;
+border-right: 1px solid #039;
+border-top: 1px solid #039;
+border-left: 1px solid #039;
+border-bottom: 1px solid #039;
+font-family:Verdana, Geneva, sans-serif;
+font-size:14px;
+color:#FFF;
 }
 
-a:hover {
-	text-decoration: underline;
+.body_sistema{
+border-radius:5px;
+/*background:url(imagenes/fondo.png);*
+/*background-repeat:no-repeat;*/
+/*background-position: right;*/
+background: #FFF;
+border-right: 1px solid #039;
+border-top: 1px solid #039;
+border-left: 1px solid #039;
+border-bottom: 1px solid #039;
+font-family:Verdana, Geneva, sans-serif;
+font-size:14px;
+color:#039;
 }
 
-.newappIcon {
-	padding-top: 10%;
-	display: block;
-	margin: 0 auto;
-	padding-bottom: 2em;
-	max-width:200px;
+.boton{
+border-radius:5px;	
+border-right: 1px solid #366;
+border-top: 1px solid #366;
+border-left: 1px solid #366;
+border-bottom: 1px solid #366;
+text-align: center;
+height:40px;
+width:120px;
+font-family:Verdana, Geneva, sans-serif;
+font-size:12px;
+color:#FFF;
+background:#366;
 }
-
-h1 {
-	font-weight: bold;
-	font-size: 2em;
-}
-
-.leftHalf {
-	float: left;
-	background-color: #26343f;
-	width: 45%;
-	height: 100%;
-}
-
-.rightHalf {
-	float: right;
-	width: 55%;
-	background-color: #313f4a;
-	height: 100%;
-	overflow:auto;
-}
-
-.description {
-	padding-left: 50px;
-	padding-right: 50px;
-	text-align: center;
-	font-size: 1.2em;
-}
-
-.blue {
-	color: #00aed1;
-}
-
-
-table {
-	table-layout: fixed;
-	width: 800px;
-	margin: 0 auto;
-	word-wrap: break-word;
-	padding-top:10%;
-}
-
-th {
-	border-bottom: 1px solid #000;
-}
-
-th, td {
-	text-align: left;
-	padding: 2px 20px;
-}
-
-.env-var {
-	text-align: right;
-	border-right: 1px solid #000;
-	width: 30%;
-}
-
-pre {
-	padding: 0;
-	margin: 0;
-}
-
