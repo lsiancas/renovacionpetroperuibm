@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Rsequiponew" value="name:activonew;datatype:string,name:descripcion;datatype:string,name:serie;datatype:string,name:marca;datatype:string,name:procesador;datatype:string,name:disco;datatype:string,name:memoria;datatype:string,name:lan;datatype:string,name:wlan;datatype:string,name:idfuncion;datatype:string,name:funcion;datatype:string" />
+	<infoitem key="UD_Rsmonitor" value="name:idmonitor;datatype:string,name:detmonitor;datatype:string,name:semonitor;datatype:string,name:marca;datatype:string" />
+	<infoitem key="UD_Rsteclado" value="name:idteclado;datatype:string,name:detteclado;datatype:string,name:seteclado;datatype:string,name:marca;datatype:string" />
+	<infoitem key="UD_Rsmouse" value="name:idmouse;datatype:string,name:detmouse;datatype:string,name:semouse;datatype:string,name:marca;datatype:string" />
+	<infoitem key="UD_Rspersona" value="name:idpersona;datatype:string,name:persona;datatype:string" />
+	<infoitem key="UD_Rssede" value="name:idlocalidad;datatype:string,name:localidad;datatype:string,name:idsede;datatype:string,name:sede;datatype:string" />
+	<infoitem key="UD_RsYaRealizado" value="name:fecha;datatype:date,name:piso;datatype:string,name:ubicacion;datatype:string,name:software;datatype:string,name:idmonitor;datatype:string,name:idteclado;datatype:string,name:idmouse;datatype:string,name:idpersona;datatype:string,name:activoold;datatype:string,name:activonew;datatype:string,name:idlocalidad;datatype:string" />
+	<infoitem key="UD_RsUsuario" value="name:idusuario;datatype:string,name:usuario;datatype:string,name:clave;datatype:string,name:nombres;datatype:string,name:apellidos;datatype:string,name:permitido;datatype:string" />
+</info>

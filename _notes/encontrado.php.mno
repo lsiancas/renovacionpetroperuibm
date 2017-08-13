@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Rsencontrado" value="name:activoold;datatype:string,name:descripcion;datatype:string,name:serie;datatype:string,name:cambio;datatype:string,name:idfuncion;datatype:string,name:idlocalidad;datatype:string" />
+	<infoitem key="UD_Rslocalidad" value="name:idlocalidad;datatype:string,name:localidad;datatype:string,name:idsede;datatype:string" />
+	<infoitem key="UD_RsYaRealizado" value="name:fecha;datatype:date,name:piso;datatype:string,name:ubicacion;datatype:string,name:software;datatype:string,name:idmonitor;datatype:string,name:idteclado;datatype:string,name:idmouse;datatype:string,name:idpersona;datatype:string,name:activoold;datatype:string,name:activonew;datatype:string,name:idlocalidad;datatype:string,name:idusuario;datatype:string" />
+</info>
