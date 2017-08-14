@@ -107,7 +107,7 @@ $fecha = date('d/m/Y');
 $encontrado = $_POST['txtencontrado'];
 $registro = $_POST['txtregistro'];
 $usuario = $_POST['txtusuario'];
-$piso = $_POST['txtpiso'];
+$piso = "PISO ".$_POST['txtpiso'];
 $ubicacion = $_POST['txtubicacion'];
 $local = $_POST['cmblocalidad'];
 $software = $_POST['txtsoftware'];
@@ -151,7 +151,7 @@ $sede = $row_Rssede['sede'];
 $localidad = $row_Rssede['localidad'];
 
 /*Seccion Creacion Plantilla*/
-require_once dirname(__FILE__).'/PHPWord-master/src/PhpWord/Autoloader.php';
+require_once dirname(__FILE__).'../PHPWord-master/src/PhpWord/Autoloader.php';
 \PhpOffice\PhpWord\Autoloader::register();
 
 use PhpOffice\PhpWord\TemplateProcessor;
