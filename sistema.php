@@ -42,13 +42,10 @@ function reportes(){
         </tr>
       <tr>
         <td height="45" align="center" valign="middle"><input name="btnreportes" type="button" class="boton" id="btnreportes" value="    REPORTAR   " onclick="reportes()" /></td>
-        </tr>
+      </tr>
       <tr>
         <td height="45" align="center" valign="middle"><input name="btnsalir" type="button" class="boton" id="btnsalir" value="       SALIR      " onclick="salir()" /></td>
-        </tr>
-      <tr>
-        <td height="45">&nbsp;</td>
-        </tr>
+      </tr>
       <tr>
         <td height="35">&nbsp;</td>
         </tr>

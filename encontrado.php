@@ -71,12 +71,37 @@ $totalRows_RsYaRealizado = mysql_num_rows($RsYaRealizado);
 <script>
 function inicio(){
  document.getElementById("txtregistro").focus();
+ document.getElementById("btndevolver").type = "hidden";
+ 
 }
 function salir(){
  document.location = "salir.php";
 }
 function retornar(){
  document.location = "renovacion.php";
+}
+function solo_devolver(){
+ if(document.getElementById("chkvalida").checked){
+	 document.getElementById("btnasignar").type = "hidden";
+	 document.getElementById("txtregistro").type = "hidden";
+	 document.getElementById("btndevolver").type = "button";
+  }else{
+	  document.getElementById("btnasignar").type = "button";
+  	  document.getElementById("txtregistro").type = "textbox";
+	  document.getElementById("btndevolver").type = "hidden";
+  }
+}
+function devolver(){
+	var d, s, u, p, a, l, s;
+	
+	d = document.getElementById("txtencontrado").value;
+	u = document.getElementById("txtusuario").value;
+	p = document.getElementById("txtpiso").value;
+	a = document.getElementById("txtubicacion").value;
+	l = document.getElementById("cmblocalidad").value;
+	s = document.getElementById("txtsoftware").value;
+		 
+	document.location = "devolucion.php?rd="+d+'&us='+u+'&pi='+p+'&ar='+a+'&lo='+l+'&so='+s;
 }
 </script>
 <body onload="inicio()">
@@ -113,7 +138,11 @@ function retornar(){
           </tr>
           <tr>
             <td width="20%" height="20">&nbsp;</td>
-            <td width="40%" height="20"><input name="txtregistro" type="text" id="txtregistro" size="20" /></td>
+            <td width="40%" height="20"><input name="txtregistro" type="text" id="txtregistro" size="20" />
+              <input type="checkbox" name="chkvalida" id="chkvalida" onchange="solo_devolver()"/>
+              NO APLICA
+              <label for="chkvalida"></label>
+<label for="radio"></label></td>
             <td width="40%" height="20"><input name="txtusuario" type="text" id="txtusuario" size="30" /></td>
             <td width="20%" height="20">&nbsp;</td>
           </tr>
@@ -132,7 +161,7 @@ function retornar(){
           <tr>
             <td width="20%" height="20">&nbsp;</td>
             <td width="40%" height="20">LOCALIDAD</td>
-            <td width="40%" height="20">&nbsp;</td>
+            <td width="40%" height="20">SOFTWARE ADICIONAL (Separado por comas)</td>
             <td width="20%" height="20">&nbsp;</td>
           </tr>
           <tr>
@@ -151,33 +180,33 @@ do {
   }
 ?>
             </select></td>
-            <td height="20">&nbsp;</td>
+            <td height="20"><input name="txtsoftware" type="text" id="txtsoftware" size="40" /></td>
             <td height="20">&nbsp;</td>
           </tr>
           <tr>
             <td height="20">&nbsp;</td>
-            <td height="20">SOFTWARE ADICIONAL (Separado por comas)</td>
+            <td height="20">&nbsp;</td>
             <td height="20">&nbsp;</td>
             <td height="20">&nbsp;</td>
           </tr>
           <tr>
             <td width="20%" height="20">&nbsp;</td>
-            <td width="40%" height="20">
-              <input name="txtsoftware" type="text" id="txtsoftware" size="40" />
-           </td>
+            <td width="40%" height="20">&nbsp;</td>
             <td width="40%" height="20"><label for="txtsoftware"></label></td>
             <td width="20%" height="20">&nbsp;</td>
           </tr>
         </table></td>
       </tr>
       <tr>
-        <td height="45" align="center" valign="middle"><input name="btnasignar" type="submit" class="boton" id="btnasignar" value="     ASIGNAR    " /></td>
+        <td height="45" align="center" valign="middle"><input name="btnasignar" type="submit" class="boton" id="btnasignar" value="     ASIGNAR    " />
+           <input name="btndevolver" type="button" class="boton" id="btndevolver" value="DEVOLUCION" onclick="devolver()" />
+          <input name="bntretornar" type="button" class="boton" id="bntretornar" value="RETORNAR" onclick="retornar()"/></td>
         </tr>
       <tr>
-        <td height="45" align="center" valign="middle"><input name="bntretornar" type="button" class="boton" id="bntretornar" value="RETORNAR" onclick="retornar()"/></td>
+        <td height="45" align="center" valign="middle"><input name="btnsalir" type="button" class="boton" id="btnsalir" value="       SALIR      " onclick="salir()" /></td>
       </tr>
       <tr>
-        <td height="45" align="center" valign="middle"><input name="btnsalir" type="button" class="boton" id="btnsalir" value="       SALIR      " onclick="salir()" /></td>
+        <td height="45" align="center" valign="middle">&nbsp;</td>
       </tr>
       <tr>
         <td height="40">&nbsp;</td>
