@@ -96,41 +96,46 @@ if (isset($_POST['txtusuario'])) {
     <td height="50" colspan="3">&nbsp;</td>
   </tr>
   <tr>
-  <td width="20%">&nbsp;</td>
-    <td width="60%">
+  <td width="25%">&nbsp;</td>
+    <td width="50%">
     <form name="frmlogin" action="<?php echo $loginFormAction; ?>" method="POST">
-    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="body_sis">
-      <tr>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="body_sistema">
+      <tr class="body_sis">
         <td width="57%" height="35" align="center" valign="middle"><strong>FORMULARIO DE INGRESO</strong></td>
-        <td width="43%" rowspan="6" align="center" valign="middle" class="leftHalf"><img src="images/login.png" width="128" height="128" /></td>
+        <td width="43%" align="center" valign="middle" class="leftHalf">&nbsp;</td>
       </tr>
       <tr>
-        <td height="20" align="right" valign="middle">USUARIO</td>
-        </tr>
+        <td height="10" align="right" valign="middle" class="body">&nbsp;</td>
+        <td width="43%" rowspan="6" align="center" valign="middle" class="leftHalf"><img src="images/login.png" width="150" height="150" /></td>
+      </tr>
       <tr>
-        <td height="35" align="right" valign="middle">
-         
-            <input type="text" name="txtusuario" id="txtusuario" />
-          </td>
+        <td height="10" align="right" valign="middle" class="body">USUARIO</td>
         </tr>
-      <tr>
-        <td height="20" align="right" valign="middle">CLAVE</td>
-        </tr>
-      <tr>
-        <td height="35" align="right" valign="middle">
-          <input type="password" name="txtclave" id="txtclave" />
-        </td>
-        </tr>
-      <tr>
+      <tr class="body">
         <td height="35" align="right" valign="middle">
           
-            <input name="btnlogin" type="submit" class="boton" id="btnlogin" value="INGRESAR" />
+                  <input type="text" name="txtusuario" id="txtusuario" />
+         </td>
+        </tr>
+      <tr class="body">
+        <td height="10" align="right" valign="middle">CLAVE</td>
+        </tr>
+      <tr class="body">
+        <td height="35" align="right" valign="middle">
+        
+          <input type="password" name="txtclave" id="txtclave" />
+       </td>
+        </tr>
+      <tr class="body">
+        <td height="50" align="right" valign="middle">
+    
+          <input name="btnlogin" type="submit" class="boton" id="btnlogin" value="INGRESAR" />
           </td>
         </tr>
     </table>
     </form>
     </td>
-    <td width="20%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
   </tr>
   <tr>
     <td height="50" colspan="3">&nbsp;</td>

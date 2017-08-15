@@ -59,25 +59,29 @@ $totalRows_RsUpdate = mysql_num_rows($RsUpdate);
     <td height="50" colspan="3">&nbsp;</td>
   </tr>
   <tr>
-  <td width="20%">&nbsp;</td>
-    <td width="60%">
+  <td width="25%">&nbsp;</td>
+    <td width="50%">
     <form name="frmupdate" action="update_clave.php" method="POST">
-    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="body_sis">
-      <tr>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="body_sistema">
+      <tr class="body_sis">
         <td width="57%" height="35" align="center" valign="middle"><strong>FORMULARIO CAMBIOS CREDENCIALES</strong></td>
+        <td width="43%" align="center" valign="middle" class="leftHalf">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" align="right" valign="middle">&nbsp;</td>
         <td width="43%" rowspan="6" align="center" valign="middle" class="leftHalf"><img src="images/login.png" width="128" height="128" /></td>
       </tr>
       <tr>
-        <td height="20" align="right" valign="middle">NUEVA CLAVE</td>
+        <td height="10" align="right" valign="middle">NUEVA CLAVE</td>
         </tr>
       <tr>
         <td height="35" align="right" valign="middle">
-         
-            <input type="password" name="txtuno" id="txtuno" />
-          </td>
+          
+          <input type="password" name="txtuno" id="txtuno" />
+        </td>
         </tr>
       <tr>
-        <td height="20" align="right" valign="middle">CONFIRMAR CLAVE</td>
+        <td height="10" align="right" valign="middle">CONFIRMAR CLAVE</td>
         </tr>
       <tr>
         <td height="35" align="right" valign="middle">
@@ -85,15 +89,15 @@ $totalRows_RsUpdate = mysql_num_rows($RsUpdate);
         </td>
         </tr>
       <tr>
-        <td height="35" align="right" valign="middle">
-            <input name="txtid" type="hidden" id="txtid" value="<?php echo $row_RsUpdate['idusuario']; ?>" />
-            <input name="btnlogin" type="submit" class="boton" id="btnlogin" value="ACTUALIZAR" />
-          </td>
+        <td height="50" align="right" valign="middle">
+          <input name="txtid" type="hidden" id="txtid" value="<?php echo $row_RsUpdate['idusuario']; ?>" />
+          <input name="btnlogin" type="submit" class="boton" id="btnlogin" value="ACTUALIZAR" />
+        </td>
         </tr>
     </table>
     </form>
     </td>
-    <td width="20%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
   </tr>
   <tr>
     <td height="50" colspan="3">&nbsp;</td>
