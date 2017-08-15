@@ -1,3 +1,5 @@
+<?php require_once('Connections/cnxrenovacion.php'); ?>
+<?php require_once('Connections/cnxrenovacion.php'); ?>
 <?php 
 session_start(); 
 require_once('Connections/cnxrenovacion.php'); 
@@ -113,6 +115,13 @@ $local = $_POST['cmblocalidad'];
 $software = $_POST['txtsoftware'];
 $hoy = date('Y-m-d');
 
+
+mysql_select_db($database_cnxrenovacion, $cnxrenovacion);
+$query_Rsequipoold = "select v.*,  l.localidad, s.sede, f.funcion from equiposold v join localidades l on v.idlocalidad = l.idlocalidad join funciones f on v.idfuncion = f.idfuncion join sedes s on l.idsede = s.idsede where v.activoold = '$encontrado'";
+$Rsequipoold = mysql_query($query_Rsequipoold, $cnxrenovacion) or die(mysql_error());
+$row_Rsequipoold = mysql_fetch_assoc($Rsequipoold);
+$totalRows_Rsequipoold = mysql_num_rows($Rsequipoold);
+
 //Insertar Registro
 $insertar = "insert into renovaciones values ('$hoy', '$piso', '$ubicacion', '$software', '$row_Rsmonitor[idmonitor]', '$row_Rsteclado[idteclado]', '$row_Rsmouse[idmouse]', '$row_Rspersona[idpersona]', '$encontrado', '$registro', '$local', '$row_RsUsuario[idusuario]')";
 mysql_query($insertar, $cnxrenovacion) or die ("Error $insertar".mysql_error());
@@ -150,6 +159,13 @@ $persona = $row_Rspersona['persona'];
 $sede = $row_Rssede['sede'];
 $localidad = $row_Rssede['localidad'];
 
+//Valores Devolucion
+$serieold = $row_Rsequipoold['serie'];
+$lold = $row_Rsequipoold['localidad'];
+$sold = $row_Rsequipoold['sede'];
+$fold = $row_Rsequipoold['funcion'];
+$dold = $row_Rsequipoold['descripcion'];
+
 /*Seccion Creacion Plantilla*/
 require_once dirname(__FILE__).'../PHPWord-master/src/PhpWord/Autoloader.php';
 \PhpOffice\PhpWord\Autoloader::register();
@@ -185,6 +201,12 @@ $templateWord->setValue('detaller',$det_mouse);
 $templateWord->setValue('serier',$serie_mouse);
 $templateWord->setValue('software',$software);
 $templateWord->setValue('regold',$encontrado);
+$templateWord->setValue('serieold',$serieold);
+$templateWord->setValue('lold',$lold);
+$templateWord->setValue('sold',$sold);
+$templateWord->setValue('fold',$fold);
+$templateWord->setValue('dold',$dold);
+
 
 // --- Guardamos el documento
 $templateWord->saveAs('$registro.docx');
@@ -206,5 +228,7 @@ mysql_free_result($Rspersona);
 mysql_free_result($Rssede);
 
 mysql_free_result($RsUsuario);
+
+mysql_free_result($Rsequipoold);
 
 ?>
