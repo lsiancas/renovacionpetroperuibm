@@ -97,7 +97,7 @@ $update = "update equiposold set cambio = 'REALIZADO' where activoold = '$regist
 mysql_query($update, $cnxrenovacion) or die ("Error $update".mysql_error());
  
  /*Seccion Creacion Plantilla*/
-require_once dirname(__FILE__).'/PHPWord-master/src/PhpWord/Autoloader.php';
+include_once dirname(__FILE__).'/PHPWord-master/src/PhpWord/Autoloader.php';
 \PhpOffice\PhpWord\Autoloader::register();
 
 use PhpOffice\PhpWord\TemplateProcessor;
