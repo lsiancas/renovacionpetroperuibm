@@ -97,12 +97,12 @@ $update = "update equiposold set cambio = 'REALIZADO' where activoold = '$regist
 mysql_query($update, $cnxrenovacion) or die ("Error $update".mysql_error());
  
  /*Seccion Creacion Plantilla*/
-require_once dirname(__FILE__).'../PHPWord-master/src/PhpWord/Autoloader.php';
+require_once dirname(__FILE__).'/PHPWord-master/src/PhpWord/Autoloader.php';
 \PhpOffice\PhpWord\Autoloader::register();
 
 use PhpOffice\PhpWord\TemplateProcessor;
 
-$templateWord = new TemplateProcessor('devolucion.docx');
+$templateWord = new TemplateProcessor('devolucion.doc');
  
 // --- Asignamos valores a la plantilla
 $templateWord->setValue('fecha',$fecha);
@@ -133,10 +133,10 @@ $templateWord->setValue('software',$software);
 //$templateWord->setValue('regold',$encontrado);
 
 // --- Guardamos el documento
-$templateWord->saveAs('$registro.docx');
+$templateWord->saveAs('$registro.doc');
 
 header("Content-Disposition: attachment; filename=$registro.docx; charset=iso-8859-1");
-echo file_get_contents('$registro.docx');
+echo file_get_contents('$registro.doc');
 header("location:renovacion.php");      
 
 ?>
