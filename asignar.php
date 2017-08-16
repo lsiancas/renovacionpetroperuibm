@@ -1,5 +1,4 @@
 <?php require_once('Connections/cnxrenovacion.php'); ?>
-<?php require_once('Connections/cnxrenovacion.php'); ?>
 <?php 
 session_start(); 
 require_once('Connections/cnxrenovacion.php'); 
@@ -167,12 +166,12 @@ $fold = $row_Rsequipoold['funcion'];
 $dold = $row_Rsequipoold['descripcion'];
 
 /*Seccion Creacion Plantilla*/
-require_once dirname(__FILE__).'../PHPWord-master/src/PhpWord/Autoloader.php';
+require_once dirname(__FILE__).'/PHPWord-master/src/PhpWord/Autoloader.php';
 \PhpOffice\PhpWord\Autoloader::register();
 
 use PhpOffice\PhpWord\TemplateProcessor;
 
-$templateWord = new TemplateProcessor('plantilla.docx');
+$templateWord = new TemplateProcessor('plantilla.doc');
  
 // --- Asignamos valores a la plantilla
 $templateWord->setValue('fecha',$fecha);
@@ -211,8 +210,8 @@ $templateWord->setValue('dold',$dold);
 // --- Guardamos el documento
 $templateWord->saveAs('$registro.docx');
 
-header("Content-Disposition: attachment; filename=$registro.docx; charset=iso-8859-1");
-echo file_get_contents('$registro.docx');
+header("Content-Disposition: attachment; filename=$registro.doc; charset=iso-8859-1");
+echo file_get_contents('$registro.doc');
 header("location:renovacion.php");        
 
 mysql_free_result($Rsequiponew);
