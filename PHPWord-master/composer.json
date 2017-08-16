@@ -33,7 +33,7 @@
     ],
     "require": {
         //"phpoffice/phpword": "v0.13.*"
-        "phpoffice/phpword": "dev-master",
+        //"phpoffice/phpword": "dev-master",
         "php": ">=5.3.3",
         "ext-xml": "*"
     },
