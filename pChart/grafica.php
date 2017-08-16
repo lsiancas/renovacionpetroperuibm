@@ -1,7 +1,8 @@
 <?php 
+require_once('Connections/cnxrenovacion.php');
 error_reporting (E_ALL ^ E_NOTICE);
 error_reporting(0);
-require_once('Connections/cnxrenovacion.php'); 
+ 
 
 ?>
 <?php
