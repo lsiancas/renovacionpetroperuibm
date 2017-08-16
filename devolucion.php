@@ -1,5 +1,4 @@
 <?php require_once('Connections/cnxrenovacion.php'); ?>
-<?php require_once('Connections/cnxrenovacion.php'); ?>
 <?php 
  require_once('Connections/cnxrenovacion.php'); 
  session_start(); 
